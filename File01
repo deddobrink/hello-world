@@ -1,0 +1,49 @@
+dit is een regel
+en nog en regel
+
+
+CREATE TABLE `Ana` (
+  `ProCod` varchar(15) NOT NULL,
+  `AnaCod` varchar(15) NOT NULL,
+  `MidCod` varchar(15) NOT NULL,
+  `MidHoe` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`ProCod`,`AnaCod`,`MidCod`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `Hoe` (
+  `ProCod` varchar(15) NOT NULL,
+  `AnaCod` varchar(15) NOT NULL,
+  `MidCod` varchar(15) NOT NULL,
+  `Lev` varchar(10) DEFAULT NULL,
+  `CalHoe` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`ProCod`,`AnaCod`,`MidCod`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `Mid` (
+  `ProCod` varchar(15) NOT NULL,
+  `MidCod` varchar(15) NOT NULL,
+  `MidOms` varchar(45) DEFAULT NULL,
+  `MidNor` decimal(15,2) DEFAULT NULL,
+  `MidEnh` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`ProCod`,`MidCod`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `Pro` (
+  `ProCod` varchar(15) DEFAULT NULL,
+  `ProVan` varchar(15) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1$$
+
+delimiter $$
+
+CREATE TABLE `Tal` (
+  `Ind` double DEFAULT NULL,
+  `Tal` varchar(1) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1$$
+
+delimiter $$
